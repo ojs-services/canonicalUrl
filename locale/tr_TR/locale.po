@@ -1,0 +1,96 @@
+msgid ""
+msgstr ""
+"Language: tr_TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "plugins.generic.canonicalUrl.name"
+msgstr "Kanonik Adres (Canonical URL)"
+
+msgid "plugins.generic.canonicalUrl.description"
+msgstr "Okuyucuya açık her sayfaya tek ve sabit bir kanonik adres etiketi ekler; böylece aynı içeriğe giden farklı adresler (galley bağlantısı, index.php'li/siz biçim, izleme parametreleri, sayısal kimlik ya da özel adres) arama motorlarınca kopya sayfa sayılmaz. Makale ve galley sayfaları bunu ayrıca HTTP Link başlığı olarak gönderir; hata sayfalarına basılmaz. İnce sayfalar (arama sonuçları, giriş, kullanıcı formları, bildirimler) bunun yerine noindex alır. Ayrıca dergi site haritasını temizler: galley görüntüleme adresleri (makalenin kopyası), giriş/kayıt/arama ve /issue/current çıkarılır, makale ve sayılara gerçek son güncelleme tarihi eklenir ve harita önbelleğe alınır. Her özellik eklenti ayarlarından dergi başına kapatılabilir."
+
+msgid "plugins.generic.canonicalUrl.settings.intro"
+msgstr "Bu derginin ayarları. Varsayılanlar (hepsi açık), Google ve Google Scholar için önerilen yapılandırmadır."
+
+msgid "plugins.generic.canonicalUrl.settings.tab.canonical"
+msgstr "Kanonik adres"
+
+msgid "plugins.generic.canonicalUrl.settings.tab.sitemap"
+msgstr "Site haritası"
+
+msgid "plugins.generic.canonicalUrl.settings.tab.noindex"
+msgstr "İndeksleme dışı"
+
+msgid "plugins.generic.canonicalUrl.settings.host"
+msgstr "Kanonik adresler <strong>{$canonicalHost}</strong> ana makine adını kullanıyor; config.inc.php içindeki base_url ile aynı. OJS adreslerini sitenin açıldığı adla üretir: site başka bir adla da açılıyorsa (ör. www'li), o ad kendi kanonik adreslerini alır. O adı web sunucusunda 301 ile yönlendirin."
+
+msgid "plugins.generic.canonicalUrl.settings.hostMismatch"
+msgstr "Bu sayfa <strong>{$requestHost}</strong> adıyla açıldı ve kanonik adresler <strong>{$canonicalHost}</strong> adını kullanıyor; config.inc.php içindeki base_url ise <strong>{$configHost}</strong> diyor. Site iki ana makine adıyla açılıyor ve her ad kendi kanonik adreslerini alıyor; arama motorları sitenin iki kopyasını görür. Web sunucusunda bir adı diğerine 301 ile yönlendirin ve base_url'i kalan ada göre tutun."
+
+msgid "plugins.generic.canonicalUrl.settings.canonicalTag"
+msgstr "Okuyucu sayfalarına kanonik adres etiketi (&lt;link rel=\"canonical\"&gt;) ekle"
+
+msgid "plugins.generic.canonicalUrl.settings.galleyToArticle"
+msgstr "Galley görüntüleme sayfaları (/article/view/N/M) makale sayfasını göstersin"
+
+msgid "plugins.generic.canonicalUrl.settings.linkHeader"
+msgstr "Kanonik adresi makale ve galley sayfalarında ayrıca HTTP Link başlığı olarak gönder"
+
+msgid "plugins.generic.canonicalUrl.settings.canonicalNote"
+msgstr "Sorgu parametreleri (utm_*, fbclid, gclid …) kanonik adrese hiçbir zaman girmez. Makale ve sayılarda özel adres (url_path) tanımlıysa her zaman o kullanılır. Hata sayfaları ve PDF indirmeleri kanonik adres almaz."
+
+msgid "plugins.generic.canonicalUrl.settings.sitemapUrl"
+msgstr "Dergi site haritası:"
+
+msgid "plugins.generic.canonicalUrl.settings.cacheStatus"
+msgstr "Önbellek: {$files} dosya, en yenisi {$created} tarihinde üretildi ({$urls} adres)."
+
+msgid "plugins.generic.canonicalUrl.settings.cacheEmpty"
+msgstr "Önbellek: boş. Bir sonraki site haritası isteğinde üretilir."
+
+msgid "plugins.generic.canonicalUrl.settings.sitemapFilterGalleys"
+msgstr "Galley görüntüleme adreslerini çıkar (makalenin kopyası)"
+
+msgid "plugins.generic.canonicalUrl.settings.sitemapFilterThin"
+msgstr "Giriş, kayıt, arama ve /issue/current adreslerini çıkar"
+
+msgid "plugins.generic.canonicalUrl.settings.sitemapLastmod"
+msgstr "Makale ve sayılara son değişiklik tarihi (lastmod) ekle"
+
+msgid "plugins.generic.canonicalUrl.settings.sitemapAnnouncements"
+msgstr "Duyuruları dahil et"
+
+msgid "plugins.generic.canonicalUrl.settings.sitemapCustomPages"
+msgstr "Özel sayfaları (gezinme menüsü sayfaları) dahil et"
+
+msgid "plugins.generic.canonicalUrl.settings.sitemapCache"
+msgstr "Site haritasını önbelleğe al (büyük dergiler için önerilir)"
+
+msgid "plugins.generic.canonicalUrl.settings.sitemapCacheHours"
+msgstr "Önbellekteki harita en geç şu kadar saatte yeniden üretilsin"
+
+msgid "plugins.generic.canonicalUrl.settings.sitemapCacheHours.invalid"
+msgstr "1 ile 720 arasında tam sayı (saat) girin."
+
+msgid "plugins.generic.canonicalUrl.settings.sitemapCacheNote"
+msgstr "Bir makale ya da sayı yayımlandığında, yayından kaldırıldığında veya düzenlendiğinde önbellek hemen yeniden üretilir. Bu formu kaydetmek önbelleği temizler. İzin verilen aralık: {$min}–{$max} saat."
+
+msgid "plugins.generic.canonicalUrl.settings.noindexThin"
+msgstr "İnce sayfalar kanonik adres yerine noindex alsın: arama sonuçları, giriş ve şifre sıfırlama, kayıt ve diğer kullanıcı sayfaları, bildirimler, \"Bu yayın sistemi hakkında\""
+
+msgid "plugins.generic.canonicalUrl.settings.noindexCitations"
+msgstr "Atıf biçimi indirmeleri (citationstylelanguage) X-Robots-Tag: noindex başlığı alsın"
+
+msgid "plugins.generic.canonicalUrl.settings.noindexNote"
+msgstr "noindex hem &lt;meta name=\"robots\"&gt; hem de X-Robots-Tag HTTP başlığı olarak gönderilir; bu yüzden yönlendirmelerde de geçerlidir. robots.txt ile engellenen bir yol hiç taranmaz; arama motorları onun noindex'ini görmez."
+
+msgid "plugins.generic.canonicalUrl.settings.cacheUnwritable"
+msgstr "Site haritası önbellek klasörüne (<code>{$dir}</code>) yazılamıyor; bu yüzden harita her istekte yeniden üretiliyor. Klasörü web sunucusu için yazılabilir yapın ya da site haritası önbelleğini kapatın."
+
+msgid "plugins.generic.canonicalUrl.settings.foreignCanonical"
+msgstr "Bu derginin sayfalarında başka bir kanonik etiket bulundu (son görülme {$date}, <code>{$page}</code> sayfası: <code>{$href}</code>). Kaynağı tema, başka bir eklenti ya da derginin özel etiketleridir. Eklenti bu sayfalarda kendi etiketini basmaz; böylece sayfada tam bir kanonik etiket kalır. Kanonik adresi bu eklentinin yönetmesi için diğerini kaldırın. Bu formu kaydetmek uyarıyı siler; diğer etiket hâlâ duruyorsa uyarı geri gelir."
+
+msgid "plugins.generic.canonicalUrl.settings.siteIntro"
+msgstr "Site geneli sayfalar (ör. çok dergili kurulumun ana sayfası) varsayılan ayarlarla kanonik adres alır. Ayarlar dergi başınadır: her derginin eklenti listesinden açılır."

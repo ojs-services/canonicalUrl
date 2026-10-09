@@ -1,0 +1,96 @@
+msgid ""
+msgstr ""
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "plugins.generic.canonicalUrl.name"
+msgstr "Canonical URL"
+
+msgid "plugins.generic.canonicalUrl.description"
+msgstr "Adds a single canonical link to every reader-facing page, so that alternate addresses for the same content (galley URLs, with/without index.php, tracking parameters, id vs. custom URL path) are not treated as duplicate pages by search engines. Article and galley pages also send it as an HTTP Link header; error pages get none. Thin pages (search results, login, user forms, notifications) get noindex instead. It also cleans the journal sitemap: galley viewer addresses (copies of the article), login/register/search and /issue/current are removed, articles and issues get their real last-modified date, and the sitemap is cached. Every feature can be switched off per journal in the plugin settings."
+
+msgid "plugins.generic.canonicalUrl.settings.intro"
+msgstr "Settings for this journal. The defaults (everything on) are the recommended configuration for Google and Google Scholar."
+
+msgid "plugins.generic.canonicalUrl.settings.tab.canonical"
+msgstr "Canonical address"
+
+msgid "plugins.generic.canonicalUrl.settings.tab.sitemap"
+msgstr "Sitemap"
+
+msgid "plugins.generic.canonicalUrl.settings.tab.noindex"
+msgstr "Excluded from indexing"
+
+msgid "plugins.generic.canonicalUrl.settings.host"
+msgstr "Canonical addresses use the host name <strong>{$canonicalHost}</strong>, the same as base_url in config.inc.php. OJS builds its addresses from the name the site is opened with: if the site also answers under another name (for example with www), that name gets its own canonical addresses. Redirect it with a 301 at the web server."
+
+msgid "plugins.generic.canonicalUrl.settings.hostMismatch"
+msgstr "This page was opened as <strong>{$requestHost}</strong> and canonical addresses use <strong>{$canonicalHost}</strong>, but base_url in config.inc.php says <strong>{$configHost}</strong>. The site answers under two host names and each gets its own canonical addresses, so search engines see two copies of the site. Redirect one name to the other with a 301 at the web server and keep base_url on the name that stays."
+
+msgid "plugins.generic.canonicalUrl.settings.canonicalTag"
+msgstr "Add a canonical link (&lt;link rel=\"canonical\"&gt;) to reader pages"
+
+msgid "plugins.generic.canonicalUrl.settings.galleyToArticle"
+msgstr "Galley viewer pages (/article/view/N/M) point to the article page"
+
+msgid "plugins.generic.canonicalUrl.settings.linkHeader"
+msgstr "Also send the canonical address as an HTTP Link header on article and galley pages"
+
+msgid "plugins.generic.canonicalUrl.settings.canonicalNote"
+msgstr "Query strings (utm_*, fbclid, gclid …) never enter the canonical address. Articles and issues always use their custom URL path when one is set. Error pages and PDF downloads never get a canonical address."
+
+msgid "plugins.generic.canonicalUrl.settings.sitemapUrl"
+msgstr "Journal sitemap:"
+
+msgid "plugins.generic.canonicalUrl.settings.cacheStatus"
+msgstr "Cache: {$files} file(s), newest built {$created} ({$urls} addresses)."
+
+msgid "plugins.generic.canonicalUrl.settings.cacheEmpty"
+msgstr "Cache: empty. It is built on the next sitemap request."
+
+msgid "plugins.generic.canonicalUrl.settings.sitemapFilterGalleys"
+msgstr "Remove galley viewer addresses (copies of the article)"
+
+msgid "plugins.generic.canonicalUrl.settings.sitemapFilterThin"
+msgstr "Remove login, registration, search and /issue/current"
+
+msgid "plugins.generic.canonicalUrl.settings.sitemapLastmod"
+msgstr "Add the last-modified date (lastmod) to articles and issues"
+
+msgid "plugins.generic.canonicalUrl.settings.sitemapAnnouncements"
+msgstr "Include announcements"
+
+msgid "plugins.generic.canonicalUrl.settings.sitemapCustomPages"
+msgstr "Include custom pages (navigation menu pages)"
+
+msgid "plugins.generic.canonicalUrl.settings.sitemapCache"
+msgstr "Cache the sitemap (recommended for large journals)"
+
+msgid "plugins.generic.canonicalUrl.settings.sitemapCacheHours"
+msgstr "Rebuild the cached sitemap at the latest after (hours)"
+
+msgid "plugins.generic.canonicalUrl.settings.sitemapCacheHours.invalid"
+msgstr "Enter a whole number of hours between 1 and 720."
+
+msgid "plugins.generic.canonicalUrl.settings.sitemapCacheNote"
+msgstr "The cache is also rebuilt as soon as an article or issue is published, unpublished or edited. Saving this form clears it. Allowed range: {$min}–{$max} hours."
+
+msgid "plugins.generic.canonicalUrl.settings.noindexThin"
+msgstr "Thin pages get noindex instead of a canonical address: search results, login and password reset, registration and other user pages, notifications, \"About this publishing system\""
+
+msgid "plugins.generic.canonicalUrl.settings.noindexCitations"
+msgstr "Citation format downloads (citationstylelanguage) get an X-Robots-Tag: noindex header"
+
+msgid "plugins.generic.canonicalUrl.settings.noindexNote"
+msgstr "noindex is sent both as &lt;meta name=\"robots\"&gt; and as an X-Robots-Tag HTTP header, so it also applies to redirects. A path blocked in robots.txt is never crawled, so search engines do not see its noindex."
+
+msgid "plugins.generic.canonicalUrl.settings.cacheUnwritable"
+msgstr "The sitemap cache folder (<code>{$dir}</code>) cannot be written, so the sitemap is rebuilt on every request. Make the folder writable for the web server, or switch the sitemap cache off."
+
+msgid "plugins.generic.canonicalUrl.settings.foreignCanonical"
+msgstr "Another canonical link was found on this journal's pages (last seen {$date} on <code>{$page}</code>: <code>{$href}</code>). It comes from the theme, another plugin or the journal's custom tags. On such pages this plugin leaves out its own link, so that the page has exactly one. Remove the other one to let this plugin manage the canonical address. Saving this form clears this notice; it returns if the other link is still there."
+
+msgid "plugins.generic.canonicalUrl.settings.siteIntro"
+msgstr "Site-wide pages (such as the home page of an installation with several journals) get a canonical address with the default settings. The settings themselves are per journal: open them from the plugin list of each journal."
