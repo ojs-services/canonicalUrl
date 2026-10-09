@@ -1,0 +1,96 @@
+msgid ""
+msgstr ""
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "plugins.generic.canonicalUrl.name"
+msgstr "URL canónica"
+
+msgid "plugins.generic.canonicalUrl.description"
+msgstr "Añade un único enlace canónico a cada página visible para los lectores, de modo que las direcciones alternativas de un mismo contenido (URL de galeradas, con o sin index.php, parámetros de seguimiento, id o ruta URL personalizada) no sean tratadas como páginas duplicadas por los buscadores. Las páginas de artículo y de galerada lo envían además como cabecera HTTP Link; las páginas de error no llevan ninguno. Las páginas de poco contenido (resultados de búsqueda, acceso, formularios de usuario, notificaciones) reciben noindex en su lugar. En los sitios OJS 3.5 multilingües, las alternativas de idioma (hreflang) apuntan a las mismas direcciones canónicas. También limpia el mapa del sitio de la revista: se eliminan las direcciones del visor de galeradas (copias del artículo), acceso, registro, búsqueda y /issue/current; los artículos y los números reciben su fecha real de última modificación, y el mapa se guarda en caché. Cada función se puede desactivar por revista en los ajustes del módulo."
+
+msgid "plugins.generic.canonicalUrl.settings.intro"
+msgstr "Ajustes de esta revista. Los valores predeterminados (todo activado) son la configuración recomendada para Google y Google Scholar."
+
+msgid "plugins.generic.canonicalUrl.settings.tab.canonical"
+msgstr "Dirección canónica"
+
+msgid "plugins.generic.canonicalUrl.settings.tab.sitemap"
+msgstr "Mapa del sitio"
+
+msgid "plugins.generic.canonicalUrl.settings.tab.noindex"
+msgstr "Excluido de la indexación"
+
+msgid "plugins.generic.canonicalUrl.settings.host"
+msgstr "Las direcciones canónicas usan el nombre de host <strong>{$canonicalHost}</strong>, el mismo que base_url en config.inc.php. OJS construye sus direcciones a partir del nombre con el que se abre el sitio: si el sitio responde también con otro nombre (por ejemplo, con www), ese nombre recibe sus propias direcciones canónicas. Rediríjalo con un 301 en el servidor web."
+
+msgid "plugins.generic.canonicalUrl.settings.hostMismatch"
+msgstr "Esta página se abrió como <strong>{$requestHost}</strong> y las direcciones canónicas usan <strong>{$canonicalHost}</strong>, pero base_url en config.inc.php indica <strong>{$configHost}</strong>. El sitio responde con dos nombres de host y cada uno recibe sus propias direcciones canónicas, por lo que los buscadores ven dos copias del sitio. Redirija un nombre al otro con un 301 en el servidor web y mantenga base_url en el nombre que permanece."
+
+msgid "plugins.generic.canonicalUrl.settings.canonicalTag"
+msgstr "Añadir un enlace canónico (&lt;link rel=\"canonical\"&gt;) a las páginas para lectores"
+
+msgid "plugins.generic.canonicalUrl.settings.galleyToArticle"
+msgstr "Las páginas del visor de galeradas (/article/view/N/M) apuntan a la página del artículo"
+
+msgid "plugins.generic.canonicalUrl.settings.linkHeader"
+msgstr "Enviar además la dirección canónica como cabecera HTTP Link en las páginas de artículo y de galerada"
+
+msgid "plugins.generic.canonicalUrl.settings.canonicalNote"
+msgstr "Las cadenas de consulta (utm_*, fbclid, gclid …) nunca entran en la dirección canónica. Los artículos y los números usan siempre su ruta URL personalizada cuando la tienen. Las páginas de error y las descargas de PDF nunca reciben una dirección canónica."
+
+msgid "plugins.generic.canonicalUrl.settings.sitemapUrl"
+msgstr "Mapa del sitio de la revista:"
+
+msgid "plugins.generic.canonicalUrl.settings.cacheStatus"
+msgstr "Caché: {$files} archivo(s); el más reciente se generó el {$created} ({$urls} direcciones)."
+
+msgid "plugins.generic.canonicalUrl.settings.cacheEmpty"
+msgstr "Caché: vacía. Se genera en la próxima petición del mapa del sitio."
+
+msgid "plugins.generic.canonicalUrl.settings.sitemapFilterGalleys"
+msgstr "Eliminar las direcciones del visor de galeradas (copias del artículo)"
+
+msgid "plugins.generic.canonicalUrl.settings.sitemapFilterThin"
+msgstr "Eliminar acceso, registro, búsqueda y /issue/current"
+
+msgid "plugins.generic.canonicalUrl.settings.sitemapLastmod"
+msgstr "Añadir la fecha de última modificación (lastmod) a los artículos y los números"
+
+msgid "plugins.generic.canonicalUrl.settings.sitemapAnnouncements"
+msgstr "Incluir los avisos"
+
+msgid "plugins.generic.canonicalUrl.settings.sitemapCustomPages"
+msgstr "Incluir las páginas personalizadas (páginas del menú de navegación)"
+
+msgid "plugins.generic.canonicalUrl.settings.sitemapCache"
+msgstr "Guardar el mapa del sitio en caché (recomendado para revistas grandes)"
+
+msgid "plugins.generic.canonicalUrl.settings.sitemapCacheHours"
+msgstr "Regenerar el mapa en caché como máximo cada (horas)"
+
+msgid "plugins.generic.canonicalUrl.settings.sitemapCacheHours.invalid"
+msgstr "Introduzca un número entero de horas entre 1 y 720."
+
+msgid "plugins.generic.canonicalUrl.settings.sitemapCacheNote"
+msgstr "La caché también se regenera en cuanto se publica, se retira o se edita un artículo o un número. Al guardar este formulario se vacía. Intervalo permitido: {$min}–{$max} horas."
+
+msgid "plugins.generic.canonicalUrl.settings.noindexThin"
+msgstr "Las páginas de poco contenido reciben noindex en lugar de una dirección canónica: resultados de búsqueda, acceso y restablecimiento de contraseña, registro y otras páginas de usuario, notificaciones, «Acerca de este sistema de publicación»"
+
+msgid "plugins.generic.canonicalUrl.settings.noindexCitations"
+msgstr "Las descargas de formatos de cita (citationstylelanguage) reciben la cabecera X-Robots-Tag: noindex"
+
+msgid "plugins.generic.canonicalUrl.settings.noindexNote"
+msgstr "noindex se envía tanto como &lt;meta name=\"robots\"&gt; como en la cabecera HTTP X-Robots-Tag, de modo que también se aplica a las redirecciones. Una ruta bloqueada en robots.txt nunca se rastrea, así que los buscadores no ven su noindex."
+
+msgid "plugins.generic.canonicalUrl.settings.cacheUnwritable"
+msgstr "No se puede escribir en la carpeta de caché del mapa del sitio (<code>{$dir}</code>), por lo que el mapa se regenera en cada petición. Dé permisos de escritura al servidor web sobre la carpeta o desactive la caché del mapa del sitio."
+
+msgid "plugins.generic.canonicalUrl.settings.foreignCanonical"
+msgstr "Se encontró otro enlace canónico en las páginas de esta revista (visto por última vez el {$date} en <code>{$page}</code>: <code>{$href}</code>). Procede del tema, de otro módulo o de las etiquetas personalizadas de la revista. En esas páginas este módulo omite su propio enlace, para que la página tenga exactamente uno. Elimine el otro para que este módulo gestione la dirección canónica. Al guardar este formulario se borra este aviso; vuelve a aparecer si el otro enlace sigue ahí."
+
+msgid "plugins.generic.canonicalUrl.settings.siteIntro"
+msgstr "Las páginas de todo el sitio (como la página de inicio de una instalación con varias revistas) reciben una dirección canónica con los ajustes predeterminados. Los ajustes en sí son por revista: ábralos desde la lista de módulos de cada revista."

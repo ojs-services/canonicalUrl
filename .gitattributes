@@ -1,0 +1,5 @@
+# Stays in the repository, not in the packages
+/.gitattributes export-ignore
+* text eol=lf
+*.png binary
+*.gz binary
