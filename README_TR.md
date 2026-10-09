@@ -31,6 +31,8 @@ Adres aynı kalır: `https://<siteniz>/index.php/<dergi>/sitemap`
 | Duyurular, özel sayfalar (gezinme menüsü sayfaları) | kalır; iki grup da ayarlardan dışarıda bırakılabilir | |
 | Ana sayfa, arşiv, hakkında sayfaları | olduğu gibi kalır | |
 
+![Ayar sayfasının "Sitemap" (Site haritası) sekmesi: harita adresi, önbellek durumu ve harita ayarları](docs/settings-sitemap.png)
+
 - **Tarihler.** OJS `lastmod` yazmaz. Eklenti her makale ve sayıya ekler: yayın tarihi ile son değişiklik tarihinden
   geç olanı; bugünden ileri bir tarih yazılmaz.
 - **Örnek.** 80 yayımlanmış makalesi (çoğunda iki galley) ve 10 sayısı olan bir sınama dergisinde OJS'in haritası
@@ -110,7 +112,7 @@ Eklenti etkin kalır ve ayarları korunur; ayarlar veritabanında aynı eklenti 
 
 ## Ayarlar
 
-![Eklentinin ayar sayfası](docs/settings.png)
+![Ayar sayfasının "Canonical address" (Kanonik adres) sekmesi: kullanılan ana makine adı ve üç kanonik adres ayarı](docs/settings.png)
 
 Eklentiler > Genel Eklentiler > Kanonik Adres > Ayarlar (Dergi Yöneticisi ya da Site Yöneticisi; ayarlar dergi başınadır).
 Her şey varsayılan olarak açıktır; önerilen yapılandırma budur.

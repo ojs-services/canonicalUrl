@@ -31,6 +31,8 @@ The address stays the same: `https://<your-site>/index.php/<journal>/sitemap`
 | Announcements, custom pages (navigation menu pages) | kept; each group can be left out in the settings | |
 | Home page, archive, about pages | kept as they are | |
 
+![The "Sitemap" tab of the settings page, with the sitemap address, the cache status and the sitemap settings](docs/settings-sitemap.png)
+
 - **Dates.** OJS writes no `lastmod`. The plugin adds one to every article and issue: the later of its publication date
   and its last modification date, never later than today.
 - **Example.** On a test journal with 80 published articles (most with two galleys) and 10 issues, the OJS sitemap listed
@@ -112,7 +114,7 @@ The plugin stays enabled and its settings are kept; they are stored in the datab
 
 ## Settings
 
-![The settings page of the plugin](docs/settings.png)
+![The "Canonical address" tab of the settings page, with the host name in use and the three canonical settings](docs/settings.png)
 
 Plugins > Generic Plugins > Canonical URL > Settings (Journal Manager or Site Administrator; one set of settings per
 journal). Everything is on by default, which is the recommended configuration.
